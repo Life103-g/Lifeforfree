@@ -1,0 +1,89 @@
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Findyourlife</title>
+    <style>
+    body {
+        background-color: #000;
+        color: #fff;
+        font-family: 'Courier New', monospace;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+    }
+    .container {
+        text-align: center;
+        position: relative;
+    }
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+    .digit-display {
+        font-size: 4em;
+        letter-spacing: 10px;
+        margin-bottom: 30px;
+    }
+    .star {
+        position: absolute;
+        background-color: #fff;
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+    }
+    @keyframes twinkle {
+        0% { opacity: 0; }
+        50% { opacity: 1; }
+        100% { opacity: 0; }
+    }
+    .info {
+        font-size: 1.2em;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .links {
+        margin-top: 30px;
+    }
+    .links a {
+        color: #00ff00;
+        margin: 0 10px;
+        text-decoration: none;
+    }
+    .links a:hover {
+        text-decoration: underline;
+    }
+</style></head><body>
+<div class="container">
+    <h1>Galactic Digit Decoder</h1>
+    <div class="digit-display">8950244990</div>
+    <div class="info">
+        <p>Welcome, cosmic traveler! You've stumbled upon the Universal Constant of Harmonic Resonance.</p>
+        <p>This sequence of digits holds the key to understanding the fundamental frequency of our universe.</p>
+        <p>Scientists at the Intergalactic Institute of Numerology believe this number could unlock faster-than-light travel!</p>
+    </div>
+    <div class="links">
+        <a href="https://websim.ai/galactic-institute">Galactic Institute</a>
+        <a href="https://websim.ai/cosmic-numerology">Cosmic Numerology</a>
+        <a href="https://websim.ai/ftl-research">FTL Research</a>
+    </div>
+</div>
+
+<script>
+    function createStars() {
+        const container = document.querySelector('.container');
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.animationDuration = `${Math.random() * 3 + 1}s`;
+            star.style.animationDelay = `${Math.random() * 3}s`;
+            star.style.animation = 'twinkle infinite';
+            container.appendChild(star);
+        }
+    }
+    createStars();
+</script>
+</body>
+</html>
